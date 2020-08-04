@@ -42,8 +42,8 @@
     --roundLG: 80px;
     --roundMD: 60px;
     --roundSM: 40px;
-
-    --minus: -1;
+    /* Box Shadow */
+    --shadow: 0 0 20px 5px rgba(0,0,0,0.06);
 }
 
 /* (1)- Wrapper */
@@ -116,15 +116,104 @@
 /* (3)- Summary */
 .summary {
     grid-area: 11 / 1 / span 16 / span 13;
+    background: linear-gradient(180deg, var(--negative), var(--lightGradient));
+    padding: var(--spaceXL);
+    border-radius: var(--roundLG);
+    box-shadow: var(--shadow);
+}
+
+.summary h1 {
+    color: var(--text);
+    font-weight: var(--light);
+}
+
+.summary header h1 {
+    font-size: var(--lg);
+}
+
+.account-number, .transactions-limit  {
+    background-color: var(--negative);
+    border-radius: var(--spaceMD);
+    padding: var(--spaceLG);
+    box-shadow: var(--shadow);
+    margin-top: var(--spaceMD);
+}
+
+.account-number h1, .transactions-limit h1 {
+    font-size: var(--md);
+}
+
+.account-number h1:last-child, .transactions-limit h1:last-child {
+    font-weight: var(--bold);
 }
 
 /* (4)- Payment Due */
 .payment-due {
     grid-area: 1 / 15 / span 5 / span 10;
+    background: linear-gradient(180deg, var(--negative), var(--lightGradient));
+    padding: var(--spaceLG);
+    border-radius: var(--roundMD);
+    box-shadow: var(--shadow);
+}
+
+.payment-due h1 {
+    color: var(--secondary);
+    font-size: var(--md);
+}
+
+.payment-due h1:first-child {
+    font-weight: var(--light);
+    margin-bottom: var(--spaceXS);
 }
 
 /* (5)- Activities */
 .activities {
     grid-area: 7 / 15 / span 18 / span 10;
+    background: linear-gradient(180deg, var(--negative), var(--lightGradient));
+    border-radius: var(--roundLG);
+    box-shadow: var(--shadow);
+}
+
+.activities h1 {
+    color: var(--text);
+    font-weight: var(--light);
+    font-size: var(--lg);
+    padding: var(--spaceXL) var(--spaceXL) var(--spaceSM) var(--spaceXL);
+}
+
+.activities main ul {
+    list-style: none;
+}
+
+.activities main ul li {
+    padding: var(--spaceSM) var(--spaceXL);
+    color: var(--text);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.activities main ul li span:first-child {
+    font-size: var(--sm);
+    font-weight: var(--bold);
+}
+
+.activities main ul li span:last-child {
+    font-size: var(--md);
+    font-weight: var(--light);
+}
+
+.activities footer {
+    padding: var(--spaceXS) var(--spaceXL) var(--spaceXL) var(--spaceXL);
+}
+
+.activities button {
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: var(--roundSM);
+    border-radius: var(--roundSM);
+    font-size: var(--md);
+    background-color: var(--secondary);
+    color: var(--negative);
 }
 
