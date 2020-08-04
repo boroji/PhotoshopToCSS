@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
 
 * {
     margin: 0;
@@ -12,4 +12,119 @@
     box-sizing: border-box;
 }
 
+:root {
+    /* Color Palette */
+    --primary: #2306fd;
+    --secondary: #1501a7;
+    --text: #5a5580;
+    --negative: #ffffff;
+    --lightGradient: #f5f4ff;
+    --darkGradient: #44009c;
+    /* Typesize */
+    --xl: 77px;
+    --lg: 48px;
+    --md: 29px;
+    --sm: 17px;
+    /* Type Weight */
+    --black: 900;
+    --bold: 700;
+    --medium: 500;
+    --regular: 400;
+    --light: 300;
+    --thin: 100;
+    /* Margin and Padding */
+    --spaceXL: 96px;
+    --spaceLG: 72px;
+    --spaceMD: 48px;
+    --spaceSM: 24px;
+    --spaceXS: 12px;
+    /* Border Radius */
+    --roundLG: 80px;
+    --roundMD: 60px;
+    --roundSM: 40px;
+
+    --minus: -1;
+}
+
+/* (1)- Wrapper */
+.wrapper {
+    width: 1152px;
+    height: 1248px;
+    display: grid;
+    grid: repeat(26, 1fr) / repeat(24, 1fr);
+    margin: var(--spaceMD) auto;
+}
+
+/* (2)- Balance */
+.balance {
+    grid-area: 1 / 1 / span 9 / span 13;
+    background: linear-gradient(90deg, var(--primary), var(--darkGradient));
+    padding: var(--spaceXL);
+    border-radius: var(--roundLG);
+}
+
+.balance h1, .balance h2 {
+    color: var(--negative);
+}
+
+.balance header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spaceLG);
+}
+
+.date h1 {
+    font-size: var(--lg);
+    font-weight: var(--light);
+}
+
+.date h2 {
+    font-size: var(--md);
+    font-weight: var(--thin);
+}
+
+.percentage h1 {
+    font-size: var(--lg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.percentage h1 svg {
+    margin-left: var(--spaceXS);
+    transform: scale(1.2);
+    transform-origin: center center;
+}
+
+.percentage h1 svg path {
+    fill: var(--negative);
+}
+
+.balance footer h1 {
+    font-weight: var(--black);
+}
+
+.balance footer h1 span:first-child {
+    font-size: var(--lg);
+}
+
+.balance footer h1 span:last-child {
+    font-size: var(--xl);
+}
+
+/* (3)- Summary */
+.summary {
+    grid-area: 11 / 1 / span 16 / span 13;
+}
+
+/* (4)- Payment Due */
+.payment-due {
+    grid-area: 1 / 15 / span 5 / span 10;
+}
+
+/* (5)- Activities */
+.activities {
+    grid-area: 7 / 15 / span 18 / span 10;
+}
 
