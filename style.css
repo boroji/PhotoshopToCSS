@@ -16,6 +16,7 @@
     /* Color Palette */
     --primary: #2306fd;
     --secondary: #1501a7;
+    --secondaryHover: #09004c;
     --text: #5a5580;
     --negative: #ffffff;
     --lightGradient: #f5f4ff;
@@ -44,6 +45,7 @@
     --roundSM: 40px;
     /* Box Shadow */
     --shadow: 0 0 20px 5px rgba(0,0,0,0.06);
+    --shadowHover: 0 0 20px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* (1)- Wrapper */
@@ -133,7 +135,7 @@
 
 .account-number, .transactions-limit  {
     background-color: var(--negative);
-    border-radius: var(--spaceMD);
+    border-radius: var(--roundSM);
     padding: var(--spaceLG);
     box-shadow: var(--shadow);
     margin-top: var(--spaceMD);
@@ -217,3 +219,36 @@
     color: var(--negative);
 }
 
+/* (6)- Interactions */
+
+.wrapper * {
+    transition: all 0.2s ease-out;
+}
+
+.balance:hover {
+    background: linear-gradient(270deg, var(--primary), var(--darkGradient));
+    transform: scale(1.01);
+}
+
+.payment-due:hover,
+.activities:hover,
+.summary:hover,
+.account-number:hover,
+.transactions-limit:hover {
+    box-shadow: var(--shadowHover);
+    transform: scale(1.01);
+    cursor: pointer;
+}
+
+.activities ul li:hover {
+    box-shadow: var(--shadow);
+    cursor: pointer;
+    transform: translateY(-5px);
+}
+
+.activities button:hover {
+    cursor: pointer;
+    background-color: var(--secondaryHover);
+}
+
+/* (7)- Responsive */
