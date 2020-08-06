@@ -284,4 +284,123 @@
     animation-delay: 0.8s;
 }
 
-/* (8)- Responsive */
+/* (8)- Responsive 1170px */
+
+@media (max-width: 1170px) {
+  .wrapper {
+      width: 672px;
+      height: 1872px;
+      grid: repeat(39, 1fr) / repeat(7, 1fr);
+  }
+
+  /* (8.1)- Responsive grid and padding */
+  .balance, .payment-due, .summary {
+      grid-column: 1 / span 7;
+      padding: var(--spaceMD);
+      border-radius: var(--roundSM);
+  }
+  .balance {
+      grid-row: 1 / span 5;
+  }
+  .payment-due {
+      grid-row: 7 / span 4;
+  }
+  .activities {
+      grid-column: 1 / span 7;
+      grid-row: 12 / span 16;
+      border-radius: var(--roundMD);
+  }
+  .summary {
+      grid-row: 29 / span 11;
+  }
+
+  /* (8.2)- Responsive balance typography */
+  .date h1 {
+      font-size: var(--md);
+      font-weight: var(--regular);
+  }
+
+  .date h2 {
+      font-size: var(--sm);
+      font-weight: var(--light);
+  }
+
+  .percentage h1 {
+      font-size: var(--md);
+  }
+
+  .balance footer h1 span:first-child {
+      font-size: var(--md);
+  }
+
+  .balance footer h1 span:last-child {
+      font-size: var(--lg);
+  }
+
+  .balance header {
+      margin-bottom: var(--spaceSM);
+  }
+
+  /* (8.3)- Responsive summary typography */
+  .summary h1 {
+      font-weight: var(--regular);
+  }
+
+  .summary header h1 {
+      font-size: var(--md);
+  }
+
+  .account-number,
+  .transactions-limit {
+      border-radius: var(--roundSM);
+      padding: var(--spaceMD);
+      margin-top: var(--spaceMD);
+  }
+
+  .account-number h1,
+  .transactions-limit h1 {
+      font-size: var(--sm);
+  }
+
+  /* (8.4)- Responsive activities grid and typography */
+  .activities h1 {
+      font-weight: var(--regular);
+      font-size: var(--md);
+      padding: var(--spaceMD) var(--spaceXS) var(--spaceMD) var(--spaceMD);
+  }
+  .activities main ul li {
+      padding: var(--spaceSM) var(--spaceMD);
+  }
+
+  .activities main ul li span:last-child {
+      font-size: var(--sm);
+      font-weight: var(--regular);
+  }
+
+  .activities footer {
+      padding: var(--spaceMD) var(--spaceMD) var(--spaceMD) var(--spaceMD);
+  }
+
+  .activities button {
+      padding: var(--spaceSM);
+      border-radius: var(--spaceXS);
+      font-size: var(--sm);
+  }
+}
+
+/* (9)- Responsive 710px */
+
+@media (max-width: 710px) {
+  .wrapper {
+      width: 336px;
+  }
+}
+
+/* (10)- Responsive 1440px above */
+
+@media (min-width: 1510px) {
+    .wrapper {
+        width: 1440px;
+    }
+}
+
